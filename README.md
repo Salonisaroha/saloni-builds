@@ -13,7 +13,7 @@ A modern, responsive personal portfolio website built with Angular 18, TypeScrip
   - Project cards with hover effects
   - Skills grid with icons
   - Timeline/Experience section
-  - Contact form with EmailJS integration
+  - Contact form with Formspree integration
 - **Performance Optimized**: Lazy loading, optimized assets
 
 ## 🛠️ Tech Stack
@@ -23,7 +23,7 @@ A modern, responsive personal portfolio website built with Angular 18, TypeScrip
 - **Styling**: SCSS
 - **Animations**: Angular Animations
 - **Forms**: Angular Reactive Forms
-- **Email Service**: EmailJS (optional)
+- **Email Service**: Formspree
 
 ## 📁 Project Structure
 
@@ -93,30 +93,54 @@ npm run build --configuration production
 
 The build artifacts will be stored in the `dist/personal_portfolio/browser/` directory.
 
-## 📧 EmailJS Configuration
+## 📧 Formspree Configuration
 
-To enable the contact form:
+The contact form is configured with Formspree for email handling:
 
-1. Sign up at [EmailJS](https://www.emailjs.com/)
-2. Create a service and template
-3. Update `src/app/components/contact/contact.component.ts`:
-   - Uncomment the EmailJS import
-   - Replace `YOUR_SERVICE_ID`, `YOUR_TEMPLATE_ID`, and `YOUR_PUBLIC_KEY`
-   - Uncomment the emailjs.send() call
-   - Remove the setTimeout simulation
+1. The form is already configured with endpoint: `https://formspree.io/f/mnjjvqre`
+2. Messages submitted through the contact form will be sent directly to your email
+3. No additional setup required - the form is ready to use
+4. Formspree provides:
+   - Spam protection
+   - Form validation
+   - Email notifications
+   - Free tier: 50 submissions/month
+
+### To use your own Formspree form:
+1. Sign up at [Formspree](https://formspree.io/)
+2. Create a new form
+3. Replace the endpoint URL in `src/app/components/contact/contact.component.ts`
 
 ## 🚀 Deployment
 
-### Deploy to Vercel
-
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
+### Deploy to Netlify
 
 Quick deploy:
 1. Push code to GitHub
-2. Import project in Vercel
-3. Deploy automatically
+2. Connect your GitHub repository to Netlify
+3. Set build command: `npm run build`
+4. Set publish directory: `dist/personal_portfolio`
+5. Deploy automatically
 
-The `vercel.json` file is already configured for optimal deployment.
+### Manual Deployment
+1. Build the project:
+```bash
+npm run build --configuration production
+```
+2. Upload the `dist/personal_portfolio` folder to Netlify
+
+### Netlify Configuration
+Create a `netlify.toml` file in the root directory:
+```toml
+[build]
+  command = "npm run build"
+  publish = "dist/personal_portfolio"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+```
 
 ## 🎨 Customization
 
@@ -197,7 +221,7 @@ Update CSS variables in `src/styles.scss`:
 
 ### Contact Section
 - Contact form with validation
-- EmailJS integration
+- Formspree integration
 - Social links
 - Error handling
 
