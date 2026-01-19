@@ -1,0 +1,39 @@
+<section id="certifications" class="certifications">
+  <div class="container">
+    <h2 class="section-title" [@fadeInUp]>
+      <span class="title-number">06.</span>
+      Certifications
+    </h2>
+    
+    <div class="certifications-grid">
+      <div 
+        *ngFor="let cert of certifications" 
+        class="cert-card glass"
+        [@fadeInUp]
+        (click)="openCertificate(cert)">
+        <div class="cert-image-wrapper">
+          <img 
+            [src]="cert.imageUrl" 
+            [alt]="cert.name"
+            class="cert-image"
+            (error)="onImageError($event)">
+          <div class="cert-overlay">
+            <div class="cert-overlay-content">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>View Certificate</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cert-content">
+          <h3 class="cert-name">{{ cert.name }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

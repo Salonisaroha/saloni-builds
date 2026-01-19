@@ -1,0 +1,189 @@
+.experience {
+  position: relative;
+  padding: 100px 20px;
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .title-number {
+      color: var(--primary-color);
+      font-family: 'Courier New', monospace;
+      font-size: 1.5rem;
+    }
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 40px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+
+      .timeline-marker {
+        position: absolute;
+        left: -32px;
+        top: 10px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--primary-color);
+        border: 3px solid var(--bg-dark);
+        box-shadow: 0 0 10px var(--primary-color);
+        z-index: 1;
+      }
+
+      .timeline-content {
+        padding: 30px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateX(10px);
+          box-shadow: 0 10px 30px rgba(0, 217, 255, 0.2);
+        }
+
+        .timeline-header {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 15px;
+
+          .position {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 0;
+          }
+
+          .company {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            font-weight: 500;
+          }
+
+          .duration {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding: 4px 12px;
+            background: rgba(0, 217, 255, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(0, 217, 255, 0.3);
+          }
+        }
+
+        .timeline-description {
+          color: var(--text-secondary);
+          margin-bottom: 20px;
+          line-height: 1.6;
+        }
+
+        .achievements-list {
+          list-style: none;
+          padding: 0;
+          margin: 0 0 20px 0;
+
+          li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+
+            &::before {
+              content: '▹';
+              position: absolute;
+              left: 0;
+              color: var(--primary-color);
+              font-size: 1.2rem;
+            }
+          }
+        }
+
+        .technologies {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+
+          .tech-tag {
+            padding: 6px 14px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.3);
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+
+            &:hover {
+              background: rgba(0, 217, 255, 0.2);
+              transform: translateY(-2px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 80px 15px;
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .timeline {
+      padding-left: 30px;
+
+      &::before {
+        left: 10px;
+      }
+
+      .timeline-item {
+        .timeline-marker {
+          left: -22px;
+          width: 12px;
+          height: 12px;
+        }
+
+        .timeline-content {
+          padding: 20px;
+
+          .timeline-header {
+            .position {
+              font-size: 1.2rem;
+            }
+
+            .company {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+

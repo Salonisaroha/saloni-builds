@@ -1,0 +1,44 @@
+<section id="experience" class="experience">
+  <div class="container">
+    <h2 class="section-title" [@fadeInUp]>
+      <span class="title-number">03.</span>
+      Experience
+    </h2>
+    
+    <div class="timeline">
+      <div 
+        *ngFor="let exp of experiences; let i = index" 
+        class="timeline-item"
+        [@fadeInUp]>
+        <div class="timeline-marker"></div>
+        <div class="timeline-content glass">
+          <div class="timeline-header">
+            <h3 class="position">{{ exp.position }}</h3>
+            <span class="company">{{ exp.company }}</span>
+            <span class="duration">{{ exp.duration }}</span>
+          </div>
+          
+          <p class="timeline-description">{{ exp.description }}</p>
+          
+          <ul class="achievements-list">
+            <li *ngFor="let achievement of exp.achievements">
+              {{ achievement }}
+            </li>
+          </ul>
+          
+          <div class="technologies">
+            <span *ngFor="let tech of exp.technologies" class="tech-tag">
+              {{ tech }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+

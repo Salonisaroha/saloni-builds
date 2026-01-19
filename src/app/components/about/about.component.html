@@ -1,0 +1,65 @@
+<section id="about" class="about">
+  <div class="container">
+    <h2 class="section-title" [@fadeInUp]>
+      <span class="title-number">01.</span>
+      About Me
+    </h2>
+    
+    <div class="about-content">
+      <div class="about-text" [@fadeInLeft]>
+        <p class="about-description">
+          {{ personalInfo.aboutDescription }}
+        </p>
+        
+        <div class="about-details">
+          <div class="detail-item">
+            <h3>Soft Skills</h3>
+            <div class="tags">
+              <span *ngFor="let skill of personalInfo.softSkills" class="tag">
+                {{ skill }}
+              </span>
+            </div>
+          </div>
+          
+          <div class="detail-item">
+            <h3>Interests</h3>
+            <div class="tags">
+              <span *ngFor="let interest of personalInfo.interests" class="tag">
+                {{ interest }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="about-visual" [@fadeInRight]>
+        <div class="tech-showcase glass">
+          <div class="tech-orbit">
+            <div class="tech-icon tech-1" title="Redis">R</div>
+            <div class="tech-icon tech-2" title="Go">Go</div>
+            <div class="tech-icon tech-3" title="Angular">🅰️</div>
+            <div class="tech-icon tech-4" title="React">⚛️</div>
+            <div class="tech-icon tech-5" title="MongoDB">🍃</div>
+            <div class="tech-icon tech-6" title="PostgreSQL">🐘</div>
+            <div class="tech-icon tech-7" title="MySQL">🐬</div>
+            <div class="tech-icon tech-8" title="HTML">📄</div>
+            <div class="tech-icon tech-9" title="CSS">🎨</div>
+            <div class="tech-icon tech-10" title="TypeScript">TS</div>
+            <div class="tech-icon tech-11" title="C++">C++</div>
+            <div class="tech-icon tech-12" title="Java">☕</div>
+          </div>
+          <div class="center-text">
+            <span class="code-symbol">&lt;/&gt;</span>
+            <p>Tech<br>Stack</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+

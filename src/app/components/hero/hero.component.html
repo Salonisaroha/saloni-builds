@@ -1,0 +1,70 @@
+<section id="home" class="hero">
+  <div class="hero-background">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+  </div>
+  
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text" [@fadeInUp]>
+        <h1 class="hero-name">
+          Hi, I'm <span class="highlight">{{ personalInfo.name }}</span>
+        </h1>
+        
+        <h2 class="hero-title">
+          <span class="static-text">I'm a </span>
+          <span class="typewriter">{{ displayedText }}</span>
+          <span class="cursor">|</span>
+        </h2>
+        
+        <p class="hero-description">
+          {{ personalInfo.summary }}
+        </p>
+        
+        <div class="hero-buttons">
+          <a 
+            href="#contact" 
+            class="btn btn-primary"
+            (click)="scrollToSection('#contact'); $event.preventDefault()">
+            Get In Touch
+          </a>
+          <a 
+            href="assets/resume.pdf" 
+            target="_blank" 
+            class="btn btn-outline">
+            Download Resume
+          </a>
+          <a 
+            [href]="personalInfo.github" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="btn btn-outline">
+            View GitHub
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-image" [@fadeIn]>
+        <div class="image-wrapper glass">
+          <img src="assets/certificates/profile-pic.png" alt="Saloni Saroha" class="profile-image">
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <a href="#about" (click)="scrollToSection('#about'); $event.preventDefault()">
+        <span>Scroll Down</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+

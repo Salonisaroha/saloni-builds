@@ -1,0 +1,27 @@
+<section id="skills" class="skills">
+  <div class="container">
+    <h2 class="section-title" [@fadeInUp]>
+      <span class="title-number">02.</span>
+      Skills & Technologies
+    </h2>
+    
+    <div class="skills-grid">
+      <div 
+        *ngFor="let category of getCategoryKeys()" 
+        class="skill-category"
+        [@fadeInUp]>
+        <h3 class="category-title">{{ getCategoryName(category) }}</h3>
+        <div class="skills-list">
+          <div 
+            *ngFor="let skill of getSkillsByCategory(category)" 
+            class="skill-item glass"
+            [attr.data-level]="skill.level">
+            <span class="skill-name">{{ skill.name }}</span>
+            <span class="skill-level">{{ skill.level }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
