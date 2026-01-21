@@ -18,6 +18,7 @@ export const skills: Skill[] = [
   { id: 6, name: 'Node.js', category: 'framework', level: 'advanced' },
   { id: 7, name: 'Express.js', category: 'framework', level: 'advanced' },
   { id: 8, name: 'Angular', category: 'framework', level: 'advanced' },
+  { id: 21, name: 'React', category: 'framework', level: 'advanced' },
   
   // Databases
   { id: 9, name: 'MySQL', category: 'database', level: 'intermediate' },

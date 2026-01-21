@@ -14,7 +14,7 @@ import { fadeIn, fadeInUp } from '../../animations';
 export class HeroComponent implements OnInit {
   personalInfo = personalInfo;
   displayedText = '';
-  titles = ['Software Developer', 'Backend Engineer', 'Angular Developer', 'Full Stack Developer'];
+  titles = ['Passionate Programmer', 'Problem Solver'];
   currentTitleIndex = 0;
   currentCharIndex = 0;
   isDeleting = false;

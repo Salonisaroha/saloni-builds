@@ -15,7 +15,7 @@ export interface PersonalInfo {
 
 export const personalInfo: PersonalInfo = {
   name: 'Saloni Saroha',
-  title: 'Software Developer | Backend Engineer | Angular Developer',
+  title: 'Passionate Programmer | Full Stack Developer | Problem Solver',
   summary: 'Adaptable and detail-oriented technology professional with experience in designing, developing, and optimizing end-to-end digital solutions. Skilled across UI, backend, APIs, databases, and cloud. Known for strong analytical thinking, fast learning, and collaborative delivery of secure and efficient software.',
   aboutDescription: 'When I\'m not coding, you\'ll find me exploring the latest tech trends or working on side projects. I believe great software comes from understanding both the technical challenges and the people who use it. My journey started with curiosity about how websites work, and now I\'m passionate about creating digital experiences that make a difference.',
   email: 'salonisaroha5@gmail.com',
